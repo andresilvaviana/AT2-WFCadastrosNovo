@@ -96,6 +96,7 @@
             // 
             // txtCadastro
             // 
+            txtCadastro.Enabled = false;
             txtCadastro.Location = new Point(23, 46);
             txtCadastro.Name = "txtCadastro";
             txtCadastro.ReadOnly = true;

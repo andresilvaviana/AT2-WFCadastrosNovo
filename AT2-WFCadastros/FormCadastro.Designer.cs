@@ -66,6 +66,7 @@
             // txtCodigo
             // 
             txtCodigo.BorderStyle = BorderStyle.FixedSingle;
+            txtCodigo.Enabled = false;
             txtCodigo.Location = new Point(20, 33);
             txtCodigo.Name = "txtCodigo";
             txtCodigo.ReadOnly = true;
@@ -160,6 +161,7 @@
             // 
             // dtpDataCadastro
             // 
+            dtpDataCadastro.Enabled = false;
             dtpDataCadastro.Format = DateTimePickerFormat.Short;
             dtpDataCadastro.Location = new Point(20, 283);
             dtpDataCadastro.Name = "dtpDataCadastro";
