@@ -15,13 +15,13 @@ namespace AT2_WFCadastroPessoa
 
     public class Pessoa
     {
-        public Pessoa(int cadastro, string? cpf, string? nome, string? email, string? ddd, string? celular, TipoTelefone tipoTelefone, bool? filhos)
+        public Pessoa(int cadastro, string? cpf, string? nome, string? email, string? ddd, string? celular, TipoTelefone tipoTelefone, string? filhos)
         {
             Cadastro = cadastro;
             Cpf = cpf;
             Nome = nome;
             Email = email;
-            Ddd = ddd;
+            DDD = ddd;
             Celular = celular;
             TipoTelefone = tipoTelefone;
             Filhos = filhos;
@@ -33,10 +33,10 @@ namespace AT2_WFCadastroPessoa
         public string? Cpf { get; set; }
         public string? Nome { get; set; }
         public string? Email { get; set; }
-        public string? Ddd { get; set; }
+        public string? DDD { get; set; }
         public string? Celular { get; set; }
         public TipoTelefone TipoTelefone { get; set; }
-        public bool? Filhos { get; set; }
+        public string? Filhos { get; set; }
 
         public Pessoa() { }
 

@@ -85,6 +85,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(205, 196, 181);
             ClientSize = new Size(214, 222);
             Controls.Add(txtSenha);
             Controls.Add(lblSenha);

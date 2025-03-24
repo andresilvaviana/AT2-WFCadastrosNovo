@@ -91,13 +91,27 @@ namespace AT2_WFCadastroPessoa
 
             Pessoa np = new Pessoa();
 
+            if (ckbFilhos.CheckState == CheckState.Checked)
+            {
+                np.Filhos = "Possui fIlhos";
+            }
+            else if (ckbFilhos.CheckState == CheckState.Unchecked)
+            {
+                np.Filhos = "Não possui filhos";
+            }
+            else
+            {
+                Erro("Deve-se marcar se possui ou não filhos!");
+                return;
+
+            }
+
             np.Cadastro = Convert.ToInt32(txtCadastro.Text);
             np.Cpf = mktCPF.Text;
             np.Nome = txtNomeCompleto.Text;
             np.Email = txtEmail.Text;
-            np.Ddd = mktCelular.Text.Substring(0, 4);
+            np.DDD = mktCelular.Text.Substring(0, 4);
             np.Celular = mktCelular.Text.Substring(4);
-            np.Filhos = ckbFilhos.Checked;
             np.TipoTelefone = tipoTelefone;
 
             Pessoa.ListaPessoas.Add(np);
@@ -106,23 +120,18 @@ namespace AT2_WFCadastroPessoa
             int novoCadastro = qtdeCadastro + 1;
             txtCadastro.Text = novoCadastro.ToString("D4");
 
-            string filhosTexto = np.Filhos == true ? "Sim" : "Não";
-
             string mensagem = @$"
             Cadastro: {np.Cadastro}
             CPF: {np.Cpf}
             Nome: {np.Nome}
             Email: {np.Email}
-            DDD: {np.Ddd}
+            DDD: {np.DDD}
             Celular: {np.Celular}
             Tipo Telefone: {np.TipoTelefone}
-            Possui Filhos?: {filhosTexto}";
+            Possui Filhos?: {np.Filhos}";
 
             Sucesso(mensagem);
             LimparCampos();
-
-
-
 
         }
 

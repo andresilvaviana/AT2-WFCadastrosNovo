@@ -105,6 +105,8 @@
             // ckbFilhos
             // 
             ckbFilhos.AutoSize = true;
+            ckbFilhos.Checked = true;
+            ckbFilhos.CheckState = CheckState.Indeterminate;
             ckbFilhos.Location = new Point(23, 282);
             ckbFilhos.Name = "ckbFilhos";
             ckbFilhos.Size = new Size(99, 19);
@@ -114,7 +116,7 @@
             // 
             // rdbVoltar
             // 
-            rdbVoltar.Font = new Font("Clarendon Blk BT", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            rdbVoltar.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             rdbVoltar.Image = (Image)resources.GetObject("rdbVoltar.Image");
             rdbVoltar.Location = new Point(23, 329);
             rdbVoltar.Name = "rdbVoltar";
@@ -126,7 +128,7 @@
             // 
             // btnSalvar
             // 
-            btnSalvar.Font = new Font("Clarendon Blk BT", 9F);
+            btnSalvar.Font = new Font("Microsoft Sans Serif", 9F);
             btnSalvar.Image = (Image)resources.GetObject("btnSalvar.Image");
             btnSalvar.Location = new Point(153, 329);
             btnSalvar.Name = "btnSalvar";
@@ -232,6 +234,7 @@
             Controls.Add(lblCPF);
             Controls.Add(lblCadastrar);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormCadastro";

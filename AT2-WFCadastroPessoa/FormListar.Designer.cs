@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormListar));
             dgvListaPessoas = new DataGridView();
             ((System.ComponentModel.ISupportInitialize)dgvListaPessoas).BeginInit();
             SuspendLayout();
@@ -48,6 +49,7 @@
             ClientSize = new Size(597, 251);
             Controls.Add(dgvListaPessoas);
             FormBorderStyle = FormBorderStyle.FixedSingle;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MinimizeBox = false;
             Name = "FormListar";
